@@ -53,7 +53,6 @@
       padding: 0.3em 0;
       text-align: center;
       position: sticky;
-will-change: transform;
       top: 0;
       z-index: 1000;
     }
@@ -317,15 +316,16 @@ will-change: transform;
     gsap.registerPlugin(ScrollTrigger);
     // Smoothly expand the main header text when scrolling down
     gsap.to(".main-header", {
-      scale: 1.1,
-      ease: "power1.out",
-      scrollTrigger: {
-        trigger: ".banner",
-        start: "top top",
-        end: "bottom top",
-        scrub: true
-      }
-    });
+  transform: "scale(1.1)",
+  ease: "power1.out",
+  scrollTrigger: {
+    trigger: ".banner",
+    start: "top top",
+    end: "bottom top",
+    scrub: true
+  }
+});
+
   </script>
 </body>
 </html>
